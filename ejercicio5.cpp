@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Incluir la librería para funciones matemáticas
+#include <cmath> 
 
 using namespace std;
 
@@ -14,7 +14,6 @@ int main() {
 
     hipotenusa = sqrt(cateto1 * cateto1 + cateto2 * cateto2);
 
-    // Mostrar el resultado
     cout << "La longitud de la hipotenusa es: " << hipotenusa << endl;
 
     return 0;

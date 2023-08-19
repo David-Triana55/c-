@@ -15,7 +15,6 @@ int main() {
     cout << "Ingrese el valor de c: ";
     cin >> c;
 
-    // Calcula el discriminante
     discriminante = b * b - 4 * a * c;
 
     if (discriminante > 0) {

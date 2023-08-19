@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Incluir la librería para funciones matemáticas
+#include <cmath> 
 
 using namespace std;
 
@@ -9,12 +9,11 @@ int main() {
     cout<< "digite la altura del triangulo: " << endl;
     cin>> trianguloAltura;
 
-     cout<< "digite la base del triangulo: " << endl;
+    cout<< "digite la base del triangulo: " << endl;
     cin>> trianguloBase;
 
 
     area = (trianguloAltura * trianguloBase) / 2;
-    // Mostrar resultados
     
     cout << "El area del Triangulo es: " << area << endl;
 
