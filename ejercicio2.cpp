@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Incluir la librería para funciones matemáticas
+#include <cmath> 
 
 using namespace std;
 
@@ -14,7 +14,6 @@ int main() {
     cin>> numero3;
     cout<< "ingrese el cuarti numero: " << endl; 
     cin>> numero4;
-    // Mostrar resultados
 
     resultado = numero1 + numero2 + numero3 + numero4;
 
