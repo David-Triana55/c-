@@ -15,7 +15,7 @@ int main() {
 
     double salarioSemanal = tarifaHoraria * horasDiarias; 
 
-   
+
     cout << "El salario semanal del trabajador es: " << salarioSemanal << " dinero." << std::endl;
 
     return 0;
