@@ -1,9 +1,11 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int main()
 {
+    int Tamano = 5;
+
     long telefonos[5]; // {"3008550592"} 
     int indice;
     long buscarNumero;
@@ -51,7 +53,18 @@ int main()
             numeroMaximo = telefonos[k];
         }
     }
-    cout << "el numero con el mayor valor es "<< numeroMaximo;
+    cout << "El numero con el mayor valor es "<< numeroMaximo << endl;
+
+
+
+    // sort( <inicio_de_la_serie>, <final_de_la_serie>, <funcion_de_comparacion> );
+    
+    sort(telefonos, telefonos + Tamano);
+    
+        cout<<"Los numeros en orden son: ";
+        for (int l = 0; l != Tamano; l++)
+            cout << telefonos[l]<<",";
+    
     
     return 0;
 }
