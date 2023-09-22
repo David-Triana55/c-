@@ -4,13 +4,15 @@ using namespace std;
 
 int main()
 {
-    int Tamano = 5;
+    int largo = 5;
 
     long telefonos[5]; // {"3008550592"} 
     int indice;
     long buscarNumero;
 
     long numeroTelefono;
+
+    // ! cunatos quiere ingresar
     
     for (int i = 0; i < 5; i++){
         cout << "Introduce el numero telefonico del integrante " << (i +1) << ":";
@@ -55,15 +57,34 @@ int main()
     }
     cout << "El numero con el mayor valor es "<< numeroMaximo << endl;
 
-
+    // ! menu
+    // ! ingresar
+    // ! mayor 
+    // ! ordenarlos
 
     // sort( <inicio_de_la_serie>, <final_de_la_serie>, <funcion_de_comparacion> );
     
-    sort(telefonos, telefonos + Tamano);
+    // ! sort(telefonos, telefonos + Tamano);
     
-        cout<<"Los numeros en orden son: ";
-        for (int l = 0; l != Tamano; l++)
-            cout << telefonos[l]<<",";
+    //     cout<<"Los numeros en orden son: ";
+    //     for (int l = 0; l != Tamano; l++)
+    //         cout << telefonos[l]<<",";
+
+
+    for (int l=0;l<largo; l++){
+        for(int j=0;j<largo - 1; j++){
+            if (telefonos[j]>telefonos[j + 1]){
+                int tmp = telefonos[j];
+                telefonos[j] =telefonos[j + 1];
+                telefonos[j + 1]= tmp;
+            }
+        }
+    }
+    
+    for (int l = 0; l < largo; l++){
+        cout<<telefonos[l]<<"\n ";
+    }
+
     
     
     return 0;
