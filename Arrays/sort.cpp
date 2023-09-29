@@ -9,7 +9,7 @@ void busquedaBinaria(long telefonos [], long numeroBuscar, int inferior, int sup
         int mid = (inferior + superior) / 2;
         if(numeroBuscar == telefonos[mid]) {   
             cout << mid << endl;
-        } else if (telefonos[numeroBuscar] < telefonos[mid]) {
+        } else if ( numeroBuscar < telefonos[mid]) {
             return busquedaBinaria(telefonos, numeroBuscar,inferior, mid - 1);
         } else {
             return busquedaBinaria(telefonos, numeroBuscar,mid + 1, superior);
@@ -42,7 +42,7 @@ int main() {
         telefonos[i] = numeroTelefono;
     }
     
-    while (menu == 6) {
+    while (menu != 0) {
         cout << "marque numero correspondiente:" << endl;
         cout << "0- finalizar menu" << endl;
         cout << "1- Buscar numero por posicion" << endl;
@@ -50,7 +50,6 @@ int main() {
         cout << "3- Saber que numero es mayor" << endl;
         cout << "4- Ver los numeros de menor a mayor" << endl;
         cout << "5- Busqueda binaria de un numero que ingreso" << endl;
-        cout << "6- repetir menu" << endl;
         cout << "el numero marcado es: ";
         cin >> menu;
 
@@ -62,12 +61,10 @@ int main() {
             cin >> indice;
             if(indice >= 1 && indice <= 5){
                 cout <<"el indice " << indice << " es: "  << telefonos[indice - 1]<< endl;
-                cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-                cin>> menu;
+            
             } else {
                 cout << "indice no encontrado" << endl;
-                cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-                cin>> menu;
+            
             }
 
         } else if (menu == 2) {
@@ -78,15 +75,13 @@ int main() {
                 if (buscarNumero == telefonos[p - 1] ) {
                     cout << "el numero telefonico esta en la posicion" << " " << p << endl;
                     numeroEncontrado = true;
-                    cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-                    cin>> menu;
+                    
                 } 
             }
 
             if(!numeroEncontrado) {
                 cout << "error no encontrado en la posicion" << endl;
-                cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-                cin>> menu;
+            
             } 
 
         } else if (menu == 3) {
@@ -98,8 +93,7 @@ int main() {
                 }
             }
             cout << "El numero con el mayor valor es "<< numeroMaximo << endl;
-            cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-            cin>> menu;
+            
 
         } else if (menu == 4) {
 
@@ -117,24 +111,18 @@ int main() {
                 cout<<telefonos[l]<<"\n";
             }
 
-            cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-            cin>> menu;
+            
 
         } else if (menu == 5) {
         // (arreglo, numero,0, telefonos -1)
             cout<<"Ingrese el numero que desea buscar: ";
             cin>> buscarNumero;
 
-            busquedaBinaria(telefonos,buscarNumero,0, cuantos);
-            cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-            cin>> menu;
+            busquedaBinaria(telefonos,buscarNumero,0, cuantos -1);
+            
 
 
-        } else {
-            cout << "Error";
-            cout<<"Para repetir menu ingrese 6, para finalizar ingrese 0.";
-            cin>> menu;
-        }
+        } 
     }
     return 0;
 }
