@@ -27,7 +27,7 @@ int main() {
     int indice;
     long buscarNumero;
     long numeroTelefono;
-    int menu;
+    int menu = 6;
 
     cout << "cuantos numeros quiere ingresar: ";
     cin >> cuantos;
@@ -87,7 +87,7 @@ int main() {
         } else if (menu == 3) {
 
             long numeroMaximo = telefonos[1];  // [1,2,3,4,5]
-            for (int k = 0; k < 5; k++) {
+            for (int k = 0; k < cuantos; k++) {
                 if(telefonos[k] > numeroMaximo) {
                     numeroMaximo = telefonos[k];
                 }
