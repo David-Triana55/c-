@@ -27,7 +27,7 @@ int main() {
     int indice;
     long buscarNumero;
     long numeroTelefono;
-    int menu = 6;
+    int menu;
 
     cout << "cuantos numeros quiere ingresar: ";
     cin >> cuantos;
