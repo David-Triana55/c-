@@ -13,14 +13,14 @@ int main()
     // cin>> a >> b;
     // res = (a > b ? a:b);
     // cout << res << endl; 
- 
+
     // if (a > b){
     //     res = a;
     // } else {
     //     res = b;
     // }
 
- 
+
 
     // if else switch ?:   // 
     switch (day)
@@ -55,9 +55,5 @@ int main()
     // for : variable de parada
     // while : condición parada
     // do - while : incremento / decremento
-
-
-
-
     return 0;
 }
